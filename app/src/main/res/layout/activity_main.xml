@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ivRandom"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageView
+        android:id="@+id/ivSelected"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivRandom"
+        app:srcCompat="@drawable/empty" />
+
+    <Button
+        android:id="@+id/buttonApple"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@drawable/random_apple"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonWatermelon"
+        app:layout_constraintEnd_toStartOf="@+id/buttonWatermelon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonWatermelon"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@drawable/random_watermelon"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRandom"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCherry"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonApple"
+        app:layout_constraintTop_toBottomOf="@+id/ivSelected"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <Button
+        android:id="@+id/buttonCherry"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@drawable/random_cherry"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonWatermelon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonWatermelon" />
+
+    <Switch
+        android:id="@+id/switchRandomGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Start Game"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonRandom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Random"
+        app:layout_constraintBottom_toTopOf="@+id/switchRandomGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
